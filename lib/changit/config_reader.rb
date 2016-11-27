@@ -1,5 +1,5 @@
 module Changit
-  class ConfigLoader
+  class ConfigReader
     DEFAULT_SEARCH_PATH = "#{Dir.pwd}/.gitconfig".freeze
 
     attr_reader :search_path
@@ -10,7 +10,7 @@ module Changit
       freeze
     end
 
-    def load
+    def read
       search_result = Dir.glob(@search_path)
 
       if search_result.empty?
