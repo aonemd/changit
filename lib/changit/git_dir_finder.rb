@@ -4,6 +4,8 @@ module Changit
 
     def initialize(search_path: DEFAULT_SEARCH_PATH)
       @search_path = "#{search_path}/**/.git/config"
+
+      freeze
     end
 
     def find_all
