@@ -2,5 +2,4 @@
 
 require 'changit'
 
-initial = Changit::Initial.new  
-initial.hello
+Changit.run
