@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["aaooki7@gmail.com"]
   gem.description   = %q{An over-engineered tool to change git config for multiple projects at once.}
   gem.summary       = %q{An over-engineered tool to change git config for multiple projects at once.}
-  gem.homepage      = "http://aaooki.github.io"
+  gem.homepage      = "https://github.com/aaooki/changit"
 
   gem.files         = `git ls-files`.split($\).reject do |f|
     f.match(%r{^(test|spec|features)/})
