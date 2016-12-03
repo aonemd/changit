@@ -20,7 +20,7 @@ module Changit
     def reconstruct_tokens_from_hash!
       tokens = []
       @token_hash.each do |section, key_value|
-        tokens << SectionToken.new(section)  
+        tokens << SectionToken.new(section)
         key_value.each { |lhs, rhs| tokens << KeyValueToken.new("#{lhs} = #{rhs}") }
       end
 
