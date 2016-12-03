@@ -1,6 +1,9 @@
 require 'changit/version'
 require 'changit/git_dir_finder'
 require 'changit/config_reader'
+require 'changit/lexer/section_token'
+require 'changit/lexer/key_value_token'
+require 'changit/lexer'
 require 'changit/config_writer'
 
 module Changit
