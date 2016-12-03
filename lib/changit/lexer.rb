@@ -5,7 +5,7 @@ module Changit
       [/^[^(=|\[|\s)]*\s*\=\s*[^(=|\[|\])]*/, KeyValueToken].freeze
     ].freeze
 
-    attr_reader :tokens, :token_hash
+    attr_reader :original_expression, :tokens, :token_hash
 
     def initialize(expression)
       @original_expression = expression
