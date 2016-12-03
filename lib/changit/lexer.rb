@@ -17,6 +17,16 @@ module Changit
       @tokens.map(&:to_s).join
     end
 
+    def reconstruct_tokens_from_hash!
+      tokens = []
+      @token_hash.each do |section, key_value|
+        tokens << SectionToken.new(section)  
+        key_value.each { |lhs, rhs| tokens << KeyValueToken.new("#{lhs} = #{rhs}") }
+      end
+
+      @tokens = tokens
+    end
+
     private
 
     def tokenize
@@ -42,9 +52,9 @@ module Changit
 
       @tokens.map do |token|
         if token.class == SectionToken
-          token_hash[token] = []
+          token_hash[token.section] = {}
         else
-          token_hash[token_hash.to_a.last[0]].push(token)
+          token_hash[token_hash.to_a.last[0]][token.lhs] = token.rhs
         end
       end
 

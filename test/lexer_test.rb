@@ -4,19 +4,29 @@ require 'changit/lexer/section_token'
 
 class LexerTest < Minitest::Test
   def test_tokenize
-    tokens = lexer.tokens
+    l = lexer
+    tokens = l.tokens
 
     assert_kind_of Array, tokens
     refute_empty tokens
-    assert_equal tokens.size, lexer.original_expression.each_line.count
+    assert_equal tokens.size, l.original_expression.each_line.count
   end
 
   def test_to_hash
-    token_hash = lexer.token_hash
+    l = lexer
+    token_hash = l.token_hash
 
     assert_kind_of Hash, token_hash
     refute_empty token_hash
-    assert_kind_of_array Changit::Lexer::SectionToken, token_hash.keys
+  end
+
+  def test_reconstruct_tokens_from_hash
+    l = lexer
+    old_tokens = l.tokens
+    l.token_hash["[user]"].merge!({ 'name' => 'newname' })
+    l.reconstruct_tokens_from_hash!
+
+    refute_equal lexer.tokens, old_tokens
   end
 
   private

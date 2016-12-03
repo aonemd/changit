@@ -1,8 +1,6 @@
 module Changit
   class Lexer
     class KeyValueToken
-      include Comparable
-
       attr_reader :lhs    # left-hand side
       attr_accessor :rhs  # right-hand side
 
@@ -12,10 +10,6 @@ module Changit
 
       def to_s
         "\t#{@lhs} = #{@rhs}\n"
-      end
-
-      def <=>(another)
-        self.lhs <=> another.lhs
       end
     end
   end
