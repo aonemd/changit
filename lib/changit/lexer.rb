@@ -8,7 +8,8 @@ module Changit
     attr_reader :tokens, :token_hash
 
     def initialize(expression)
-      @tokens = tokenize(expression)
+      @original_expression = expression
+      @tokens = tokenize
       @token_hash = to_hash
     end
 
@@ -18,8 +19,8 @@ module Changit
 
     private
 
-    def tokenize(expression)
-      expression.gsub!(/\t/, '')
+    def tokenize
+      expression = @original_expression.gsub(/\t/, '')
 
       tokens = []
       expression.each_line do |line|
