@@ -1,7 +1,7 @@
 module Changit
   class Lexer
     class SectionToken
-      attr_reader :value
+      attr_reader :section
 
       def initialize(section)
         @section = section
