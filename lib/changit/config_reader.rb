@@ -4,7 +4,8 @@ module Changit
 
     attr_reader :search_path
 
-    def initialize(search_path: DEFAULT_SEARCH_PATH)
+    def initialize(search_path: nil)
+      search_path ||= DEFAULT_SEARCH_PATH
       @search_path = search_path
 
       freeze

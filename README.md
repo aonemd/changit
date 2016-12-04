@@ -18,6 +18,13 @@ file with your configuration, and run:
 changit
 ```
 
+### CLI
+To see the CLI options, type:
+
+```sh
+changit -h
+```
+
 ## Demo
 
 ![changit GIF demo](/demo.gif)
