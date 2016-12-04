@@ -2,5 +2,4 @@
 
 require 'changit'
 
-options = Changit::CLI.new
-Changit.run(options[:src_path], options[:target_paths])
+Changit.run
