@@ -3,6 +3,8 @@ Changit
 
 An over-engineered tool to change git config for multiple projects at once.
 
+[![Build Status](https://travis-ci.org/aaooki/changit.svg?branch=master)](https://travis-ci.org/aaooki/changit)
+
 ## Installation
 
 ```ruby
