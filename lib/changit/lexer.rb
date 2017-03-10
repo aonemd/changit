@@ -35,10 +35,10 @@ module Changit
       tokens = []
       expression.each_line do |line|
         RULES.each do |rule, token_type|
-          lexmeme = line.slice(rule)
+          lexeme = line.slice(rule)
 
-          if (lexmeme)
-            tokens << token_type.new(lexmeme)
+          if (lexeme)
+            tokens << token_type.new(lexeme)
             break
           end
         end
