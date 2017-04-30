@@ -3,7 +3,7 @@ Changit
 
 An over-engineered tool to change git config for multiple projects at once.
 
-[![Build Status](https://travis-ci.org/aaooki/changit.svg?branch=master)](https://travis-ci.org/aaooki/changit)
+[![Build Status](https://travis-ci.org/aaoiki/changit.svg?branch=master)](https://travis-ci.org/aaoiki/changit)
 
 ## Installation
 
@@ -34,4 +34,4 @@ changit -h
 
 ## License
 
-See [LICENSE](https://github.com/aaooki/changit/blob/master/LICENSE).
+See [LICENSE](https://github.com/aaoiki/changit/blob/master/LICENSE).
