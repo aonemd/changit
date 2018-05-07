@@ -5,7 +5,7 @@ module Changit
       attr_accessor :rhs  # right-hand side
 
       def initialize(key_value)
-        @lhs, @rhs = key_value.split('=').map(&:strip)
+        @lhs, @rhs = key_value.split('=', 2).map(&:strip)
       end
 
       def to_s
